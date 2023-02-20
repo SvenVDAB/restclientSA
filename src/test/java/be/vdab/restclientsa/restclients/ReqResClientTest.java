@@ -18,7 +18,7 @@ public class ReqResClientTest {
         assertThat(client.findById(1)).hasValueSatisfying(
                 user -> {
                     assertThat(user.data().id()).isOne();
-                    //assertThat(user.data().firstName()).isEqualTo("George"); // voornaam is null??
+                    assertThat(user.data().firstName()).isEqualTo("George"); // voornaam is null??
                     assertThat(user.data().lastName()).isEqualTo("Bluth");
                 }
         );
